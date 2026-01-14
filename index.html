@@ -203,7 +203,7 @@
 
             .nav-links.active {
                 display: flex;
-                max-height: 400px;
+                max-height: 700px;
                 opacity: 1;
             }
 
@@ -260,17 +260,12 @@
             gap: 16px;
         }
 
-        .hero-device {
+        .hero-image {
+            width: 100%;
             height: 400px;
-            background: #2d3436;
+            object-fit: cover;
             border-radius: 30px;
-            border: 8px solid #353b48;
             box-shadow: 12px 12px 24px rgb(163, 177, 198, 0.6), -12px -12px 24px rgba(255, 255, 255, 0.8);
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
         .screen-content {
@@ -681,7 +676,7 @@
             transform: scale(1.05);
         }
 
-        /* --- FOOTER --- */
+        /* --- FOOTER (REVISED 3 COLUMNS) --- */
         footer {
             background: #2d3436;
             color: #d1d9e6;
@@ -692,27 +687,52 @@
 
         .footer-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 48px;
+            grid-template-columns: 1.5fr 1fr 1fr; /* 3 Columns Layout */
+            gap: 40px;
         }
 
-        .footer-grid h2 {
+        .footer-col h2 {
             color: white;
             font-weight: 800;
+            margin-bottom: 16px;
         }
 
-        .footer-grid p {
-            opacity: 0.7;
-            margin-top: 16px;
+        .footer-col h3 {
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+            font-family: var(--font-mono);
+            text-transform: uppercase;
         }
 
-        .footer-right {
-            text-align: right;
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #d1d9e6;
+            text-decoration: none;
+            transition: color 0.3s;
+            opacity: 0.8;
+            font-weight: 500;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+            opacity: 1;
+            padding-left: 5px; /* Micro interaction */
         }
 
         .mono-label.footer-copyright {
             opacity: 0.5;
-            margin-top: 16px;
+            margin-top: 0;
         }
 
         /* --- ANIMATIONS --- */
@@ -736,18 +756,18 @@
                 font-size: 3rem;
             }
 
-            .about-grid,
             .hero-layout,
             .footer-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr; /* Stack columns on tablet/mobile */
+                gap: 40px;
             }
 
             .hero-actions {
                 justify-content: center;
             }
 
-            .hero-device {
-                height: 280px;
+            .about-grid {
+                grid-template-columns: 1fr;
             }
 
             .about-image {
@@ -773,7 +793,7 @@
                 gap: 40px;
             }
 
-            .hero-device {
+            .hero-image {
                 height: 220px;
             }
 
@@ -828,14 +848,7 @@
                             <a href="tentang.html" class="btn btn-secondary">PELAJARI METODE</a>
                         </div>
                     </div>
-                    <div class="hero-device">
-                        <div class="screen-content">
-                            <i class="ph ph-compass"></i>
-                            <span class="mono-label">GPS ACTIVE</span>
-                            <h2>4</h2>
-                            <span class="mono-label">MAIN ACTIVITIES</span>
-                        </div>
-                    </div>
+                    <img src="img/paintball3.webp" alt="Paintball Tactical Outbound" class="hero-image" loading="lazy">
                 </div>
             </div>
         </section>
@@ -1132,20 +1145,46 @@
             </div>
         </section>
     </main>
+    
     <footer>
         <div class="container">
             <div class="footer-grid">
-                <div>
-                    <h2>TACTICAlid.vercel.app</h2>
-                    <p>JL. Merdeka No. 45, Malang, Jawa Timur.<br>HQ Code: #MLG-001</p>
+                <div class="footer-col">
+                    <h2>TACTICAL.ID</h2>
+                    <p>Pusat aktivitas outbound, paintball, rafting, dan offroad terbaik di Malang dengan pendekatan psikologi industri.</p>
+                    <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.6;">
+                        JL. Merdeka No. 45, Malang, Jawa Timur.<br>HQ Code: #MLG-001
+                    </p>
                 </div>
-                <div class="footer-right">
-                    <a href="kontak.html" class="btn btn-primary" style="padding:8px 16px;">CONTACT HQ</a>
-                    <p class="mono-label footer-copyright">© 2024 TACTICAL SYSTEMS.</p>
+
+                <div class="footer-col">
+                    <h3>NAVIGASI</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="tentang.html">Tentang</a></li>
+                        <li><a href="outbound.html">Paket</a></li>
+                        <li><a href="galeri.html">Galeri</a></li>
+                        <li><a href="kontak.html">Kontak</a></li>
+                    </ul>
                 </div>
+
+                <div class="footer-col">
+                    <h3>NETWORK</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">BatuRafting</a></li>
+                        <li><a href="#">Souvenir Kantor</a></li>
+                        <li><a href="#">Artikdia</a></li>
+                        <li><a href="#">Otomagz</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 40px; padding-top: 20px; text-align: center;">
+                <p class="mono-label footer-copyright">© 2024 TACTICAL SYSTEMS.</p>
             </div>
         </div>
     </footer>
+
     <a href="https://wa.me/628123456789" class="floating-wa">
         <i class="ph ph-whatsapp-logo"></i> WhatsApp
     </a>

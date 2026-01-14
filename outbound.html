@@ -4,68 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Misi Operasi - Paket Aktivitas TACTICAL OUTBOUND</title>
+    <title>Pilihan Paket - TACTICAL OUTBOUND</title>
 
-    <!-- SEO Meta -->
-    <meta name="title" content="Misi Operasi Outdoor - TACTICAL OUTBOUND Malang">
+    <meta name="title" content="Daftar Paket TACTICAL OUTBOUND Malang">
     <meta name="description"
-        content="Jalankan misi taktis: Outbound Team Building, Paintball Warzone, Rafting Assault, Offroad Recon. Setiap paket dirancang sebagai simulasi nyata berbasis psikologi industri.">
+        content="Pilihan paket lengkap: Outbound Training, Paintball War Game, Rafting Kasembon/Batu, dan Fun Offroad Bromo. Harga transparan dan fasilitas lengkap.">
 
-    <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tactical.id/paket.html">
-    <meta property="og:title" content="Misi Operasi - TACTICAL OUTBOUND">
+    <meta property="og:url" content="https://tactical.id/outbound.html">
+    <meta property="og:title" content="Pilihan Paket - TACTICAL OUTBOUND">
     <meta property="og:description"
-        content="Pilih misi Anda: OP-OUT (Outbound), OP-PB (Paintball), OP-RF (Rafting), OP-OF (Offroad). Booking via WhatsApp resmi.">
-    <meta property="og:image" content="https://tactical.id/assets/og-missions.jpg">
+        content="Daftar harga dan fasilitas paket outbound terbaik di Malang.">
+    <meta property="og:image" content="https://tactical.id/assets/og-paket.jpg">
 
-    <!-- Canonical -->
-    <link rel="canonical" href="https://tactical.id/paket.html">
+    <link rel="canonical" href="https://tactical.id/outbound.html">
 
-    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
 
-    <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap"
         rel="stylesheet">
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
 
     <style>
-        /* --- SCROLL TO TOP BUTTON --- */
-.scroll-top {
-    position: fixed;
-    bottom: 90px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: var(--text-main);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    z-index: 998;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-    transition: all 0.3s ease;
-    opacity: 0;
-    visibility: hidden;
-}
-.scroll-top.show {
-    opacity: 1;
-    visibility: visible;
-}
-.scroll-top:hover {
-    transform: translateY(-3px) scale(1.05);
-    background: var(--accent);
-}
+        /* --- MINIMAL GLOBAL RESET --- */
         :root {
             --chassis: #e0e5ec;
             --text-main: #2d3436;
@@ -104,11 +73,12 @@
             font-weight: 700;
         }
 
+        /* --- BUTTONS --- */
         .btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 14px 28px;
+            padding: 12px 24px;
             border-radius: 8px;
             font-family: var(--font-mono);
             font-weight: 700;
@@ -118,12 +88,14 @@
             border: none;
             outline: none;
             transition: all 0.2s ease;
+            font-size: 0.9rem;
         }
 
         .btn-primary {
             background-color: var(--accent);
             color: var(--accent-fg);
             box-shadow: 6px 6px 12px rgba(163, 177, 198, 0.5), -6px -6px 12px rgba(255, 255, 255, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .btn-primary:hover {
@@ -131,22 +103,25 @@
             background-color: #e03b4b;
         }
 
-        .btn-outline {
-            background: transparent;
-            border: 2px solid var(--accent);
-            color: var(--accent);
+        .btn-secondary {
+            background-color: var(--chassis);
+            color: var(--text-main);
+            box-shadow: 6px 6px 10px rgb(163, 177, 198, 0.6), -6px -6px 10px rgba(255, 255, 255, 0.5);
         }
 
-        .btn-outline:hover {
-            background: rgba(255, 71, 87, 0.05);
+        .btn-secondary:hover {
+            transform: translateY(2px);
+            box-shadow: inset 4px 4px 8px rgb(163, 177, 198, 0.7), inset -4px -4px 8px rgba(255, 255, 255, 0.9);
         }
 
-        /* NAV */
+        /* --- NAVIGATION --- */
         nav {
             padding: 24px 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: relative;
+            z-index: 100;
         }
 
         .logo {
@@ -172,7 +147,7 @@
 
         .nav-links {
             display: flex;
-            gap: 20px;
+            gap: 24px;
             align-items: center;
         }
 
@@ -181,242 +156,300 @@
             color: var(--text-muted);
             font-weight: 600;
             font-size: 0.9rem;
+            transition: color 0.3s;
         }
 
-        .nav-links a.active,
-        .nav-links a:hover {
+        .nav-links a:hover,
+        .nav-links a.active {
             color: var(--accent);
         }
 
         .hamburger {
             display: none;
+            font-size: 1.8rem;
+            color: var(--text-main);
+            cursor: pointer;
         }
 
-        /* HERO */
-        .hero-section {
-            padding: 100px 0 80px;
+        /* --- MOBILE NAV --- */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--chassis);
+                flex-direction: column;
+                padding: 20px 0;
+                gap: 16px;
+                border-radius: 0 0 16px 16px;
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+                max-height: 0;
+                overflow: hidden;
+                opacity: 0;
+                transition: max-height 0.4s ease, opacity 0.3s ease;
+                z-index: 99;
+            }
+
+            .nav-links.active {
+                display: flex;
+                max-height: 700px;
+                opacity: 1;
+            }
+
+            .nav-links a,
+            .nav-links .btn {
+                padding: 12px 24px;
+                text-align: center;
+                justify-content: center;
+                font-size: 1rem;
+                width: auto;
+            }
+        }
+
+        /* --- HERO SECTION (Simple) --- */
+        .page-hero {
+            padding: 80px 0 40px;
             text-align: center;
-            background: linear-gradient(135deg, #2d3436 0%, #1a1f26 100%);
-            color: white;
-            border-radius: 0 0 40px 40px;
-            margin-bottom: 60px;
         }
 
-        .hero-badge {
-            display: inline-block;
-            background: rgba(255, 71, 87, 0.2);
-            color: var(--accent);
-            padding: 6px 16px;
-            border-radius: 20px;
-            margin-bottom: 20px;
-            font-family: var(--font-mono);
-            font-size: 0.8rem;
-        }
-
-        .hero-title {
-            font-size: 3.5rem;
+        .page-title {
+            font-family: var(--font-sans);
             font-weight: 800;
-            margin: 0 0 24px;
+            font-size: 3rem;
+            margin: 0 0 16px;
+            color: var(--text-main);
             letter-spacing: -0.03em;
         }
 
-        .hero-subtitle {
-            font-size: 1.25rem;
-            max-width: 700px;
+        .page-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 600px;
             margin: 0 auto;
-            opacity: 0.9;
         }
 
-        /* MISSION GRID */
-        .missions-section {
-            padding: 60px 0;
-        }
-
-        .mission-category {
-            margin-bottom: 80px;
-        }
-
-        .category-header {
+        /* --- TAB NAVIGATION --- */
+        .tabs-container {
             display: flex;
-            align-items: center;
-            gap: 16px;
-            margin-bottom: 40px;
-        }
-
-        .category-icon {
-            width: 56px;
-            height: 56px;
-            border-radius: 50%;
-            background: var(--chassis);
-            display: flex;
-            align-items: center;
             justify-content: center;
-            font-size: 28px;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 50px;
+            padding: 0 16px;
+        }
+
+        .tab-item {
+            padding: 12px 28px;
+            background: var(--chassis);
+            border: none;
+            border-radius: 50px;
+            font-weight: 700;
+            color: var(--text-muted);
+            cursor: pointer;
+            box-shadow: 5px 5px 10px rgb(163, 177, 198, 0.6), -5px -5px 10px rgba(255, 255, 255, 0.5);
+            transition: all 0.3s;
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+        }
+
+        .tab-item:hover,
+        .tab-item.active {
             color: var(--accent);
-            box-shadow: 6px 6px 12px rgba(163, 177, 198, 0.5), -6px -6px 12px rgba(255, 255, 255, 0.5);
+            box-shadow: inset 4px 4px 8px rgb(163, 177, 198, 0.6), inset -4px -4px 8px rgba(255, 255, 255, 0.9);
         }
 
-        .category-title {
-            font-size: 2rem;
-            font-weight: 800;
-            margin: 0;
+        /* --- PACKAGES GRID (NEW STRUCTURE) --- */
+        .packages-wrapper {
+            padding-bottom: 100px;
         }
 
-        .mission-grid {
-            display: grid;
+        .package-grid {
+            display: none; /* Hidden by default */
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 32px;
+            gap: 40px;
+            animation: fadeIn 0.5s ease;
         }
 
-        .mission-card {
-            background: white;
+        .package-grid.active {
+            display: grid;
+        }
+
+        .card-trip {
+            background: var(--chassis);
             border-radius: 20px;
-            padding: 32px;
-            box-shadow: 9px 9px 16px rgb(163, 177, 198, 0.4), -9px -9px 16px rgba(255, 255, 255, 0.6);
+            overflow: hidden;
+            box-shadow: 9px 9px 16px rgb(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
+            transition: transform 0.3s ease;
             position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-trip:hover {
+            transform: translateY(-8px);
+        }
+
+        .card-img-wrap {
+            position: relative;
+            height: 220px;
             overflow: hidden;
         }
 
-        .mission-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
+        .card-img-wrap img {
             width: 100%;
-            height: 4px;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .card-trip:hover .card-img-wrap img {
+            transform: scale(1.1);
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: rgba(45, 52, 54, 0.8);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            font-family: var(--font-mono);
+            backdrop-filter: blur(4px);
+        }
+
+        .card-badge.best {
             background: var(--accent);
         }
 
-        .mission-code {
-            font-family: var(--font-mono);
-            font-size: 0.85rem;
-            color: var(--accent);
-            font-weight: 700;
-            margin-bottom: 12px;
-            display: block;
-        }
-
-        .mission-title {
-            font-size: 1.5rem;
-            font-weight: 800;
-            margin: 0 0 16px;
-        }
-
-        .mission-meta {
+        .card-body {
+            padding: 24px;
+            flex-grow: 1;
             display: flex;
-            gap: 16px;
-            margin: 16px 0;
-            font-size: 0.85rem;
-            color: var(--text-muted);
+            flex-direction: column;
         }
 
-        .difficulty {
-            display: inline-block;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-
-        .difficulty.low {
-            background: #d1fae5;
-            color: #065f46;
-        }
-
-        .difficulty.medium {
-            background: #fef3c7;
-            color: #92400e;
-        }
-
-        .difficulty.high {
-            background: #fee2e2;
-            color: #b91c1c;
-        }
-
-        .objective {
-            font-weight: 700;
-            margin: 20px 0 12px;
-            font-size: 0.95rem;
+        .card-title {
+            font-size: 1.35rem;
+            font-weight: 800;
+            margin: 0 0 8px;
             color: var(--text-main);
         }
 
-        .objective-list {
-            padding-left: 20px;
-            margin: 8px 0 24px;
-            font-size: 0.95rem;
-            color: var(--text-muted);
+        .card-price {
+            font-size: 1.5rem;
+            color: var(--accent);
+            font-weight: 700;
+            font-family: var(--font-mono);
+            margin-bottom: 20px;
         }
 
-        .timeline {
-            background: var(--chassis);
-            padding: 16px;
-            border-radius: 12px;
+        .card-price span {
             font-size: 0.9rem;
-            margin: 20px 0;
-        }
-
-        /* CTA */
-        .cta-section {
-            text-align: center;
-            padding: 80px 0;
-        }
-
-        .cta-box {
-            background: white;
-            padding: 40px;
-            border-radius: 24px;
-            box-shadow: 9px 9px 16px rgb(163, 177, 198, 0.4), -9px -9px 16px rgba(255, 255, 255, 0.6);
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .cta-title {
-            font-size: 2rem;
-            margin: 0 0 16px;
-            font-weight: 800;
-        }
-
-        .cta-desc {
             color: var(--text-muted);
-            margin-bottom: 24px;
+            font-weight: 400;
         }
 
-        /* FOOTER */
+        .card-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 24px;
+            flex-grow: 1;
+        }
+
+        .card-features li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+            border-bottom: 1px dashed #cbd5e0;
+            padding-bottom: 8px;
+        }
+
+        .card-features li:last-child {
+            border-bottom: none;
+        }
+
+        .card-features i {
+            color: #2ecc71;
+            font-size: 1.1rem;
+        }
+
+        /* --- FOOTER (3 COLUMNS) --- */
         footer {
             background: #2d3436;
             color: #d1d9e6;
             padding: 80px 0 40px;
             margin-top: 80px;
+            position: relative;
         }
 
         .footer-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 48px;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 40px;
         }
 
-        .footer-grid h2 {
+        .footer-col h2 {
             color: white;
             font-weight: 800;
+            font-size: 1.8rem;
+            margin: 0 0 16px 0;
         }
 
-        .footer-grid p {
+        .footer-col h3 {
+            color: white;
+            font-size: 1.1rem;
+            margin: 0 0 20px 0;
+            font-weight: 800;
+            font-family: var(--font-mono);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #d1d9e6;
+            text-decoration: none;
+            transition: all 0.3s;
             opacity: 0.7;
-            margin-top: 16px;
+            font-weight: 500;
+            display: inline-block;
         }
 
-        .footer-right {
-            text-align: right;
+        .footer-links a:hover {
+            color: var(--accent);
+            opacity: 1;
+            transform: translateX(5px);
         }
 
         .mono-label.footer-copyright {
             opacity: 0.5;
-            margin-top: 16px;
+            margin-top: 0;
         }
 
-        /* FLOATING WA */
-        .floating-wa {
+        /* --- FLOATING & ANIMATIONS --- */
+        .floating-wa,
+        .scroll-top {
             position: fixed;
             bottom: 30px;
             right: 30px;
@@ -428,14 +461,48 @@
             gap: 10px;
             text-decoration: none;
             z-index: 999;
+            font-family: var(--font-sans);
+            transition: transform 0.3s;
+        }
+
+        .floating-wa {
             background: #25D366;
             color: white;
             box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-            font-family: var(--font-sans);
         }
 
-        .floating-wa:hover {
+        .scroll-top {
+            background: var(--text-main);
+            color: white;
+            bottom: 90px;
+            opacity: 0;
+            visibility: hidden;
+            width: 50px;
+            height: 50px;
+            padding: 0;
+            justify-content: center;
+        }
+
+        .scroll-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .floating-wa:hover,
+        .scroll-top:hover {
             transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         @keyframes pulse {
@@ -452,43 +519,32 @@
             }
         }
 
+        /* --- RESPONSIVE --- */
+        @media (max-width: 992px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2.5rem;
+            .page-title {
+                font-size: 2.2rem;
             }
 
-            .category-header {
-                flex-direction: column;
-                text-align: center;
+            .tab-item {
+                padding: 10px 20px;
+                font-size: 0.8rem;
             }
 
-            .hamburger {
-                display: block;
-            }
-
-            .nav-links {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                height: 100vh;
-                width: 75%;
-                background: var(--chassis);
-                flex-direction: column;
-                justify-content: center;
-                box-shadow: -10px 0 20px rgba(0, 0, 0, 0.2);
-                transition: right 0.3s;
-                z-index: 99;
-                padding: 2rem;
-            }
-
-            .nav-links.active {
-                right: 0;
-            }
-
-            .floating-wa {
+            .floating-wa,
+            .scroll-top {
                 right: 20px;
                 bottom: 20px;
                 font-size: 0.8rem;
+            }
+
+            .scroll-top {
+                bottom: 70px;
             }
         }
     </style>
@@ -496,7 +552,6 @@
 
 <body>
 
-    <!-- NAV -->
     <div class="container">
         <nav>
             <a href="index.html" class="logo">
@@ -509,233 +564,198 @@
             <div class="nav-links" id="navLinks">
                 <a href="index.html">Home</a>
                 <a href="tentang.html">Tentang</a>
-                <a href="paket.html" class="active">Paket</a>
+                <a href="outbound.html" class="active">Paket</a>
                 <a href="galeri.html">Galeri</a>
                 <a href="testimoni.html">Testimoni</a>
                 <a href="blog.html">Blog</a>
                 <a href="kontak.html">Kontak</a>
-                
             </div>
         </nav>
     </div>
 
     <main>
-
-        <!-- HERO -->
-        <section class="hero-section">
+        <section class="page-hero">
             <div class="container">
-                <div class="hero-badge">OPERATION BRIEFING ROOM</div>
-                <h1 class="hero-title">PILIH MISI ANDA</h1>
-                <p class="hero-subtitle">Setiap paket adalah simulasi nyata yang dirancang untuk melatih
-                    kepemimpinan, kolaborasi, dan ketahanan mental.</p>
+                <h1 class="page-title">PILIH MISI ANDA</h1>
+                <p class="page-subtitle">Berbagai skenario aktivitas outdoor yang dirancang untuk kebutuhan tim,
+                    adrenalin, dan rekreasi.</p>
             </div>
         </section>
 
-        <!-- MISSIONS -->
-        <section class="missions-section">
+        <section class="packages-wrapper">
             <div class="container">
+                <div class="tabs-container">
+                    <button class="tab-item active" onclick="openTab(event, 'outbound')">OUTBOUND</button>
+                    <button class="tab-item" onclick="openTab(event, 'paintball')">PAINTBALL</button>
+                    <button class="tab-item" onclick="openTab(event, 'rafting')">RAFTING</button>
+                    <button class="tab-item" onclick="openTab(event, 'offroad')">OFFROAD</button>
+                </div>
 
-                <!-- OUTBOUND -->
-                <div class="mission-category">
-                    <div class="category-header">
-                        <div class="category-icon"><i class="ph ph-users-three"></i></div>
-                        <h2 class="category-title">OPERASI TEAM BUILDING (OP-OUT)</h2>
-                    </div>
-                    <div class="mission-grid">
-                        <div class="mission-card">
-                            <span class="mission-code">OP-OUT-01</span>
-                            <h3 class="mission-title">One Day Recon</h3>
-                            <div class="mission-meta">
-                                <span>Durasi: 6 Jam</span>
-                                <span class="difficulty low">Mudah</span>
-                            </div>
-                            <span class="objective">Tujuan Psikologis:</span>
-                            <ul class="objective-list">
-                                <li>Membangun kepercayaan antar anggota</li>
-                                <li>Melatih komunikasi efektif</li>
-                            </ul>
-                            <div class="timeline">
-                                <strong>Timeline:</strong> Ice Breaking → Problem Solving → Trust Fall →
-                                Refleksi
-                            </div>
-                            <a href="https://wa.me/628123456789" class="btn btn-outline">Jalankan
-                                Misi</a>
+                <div id="outbound" class="package-grid active">
+                    <div class="card-trip">
+                        <div class="card-img-wrap">
+                            <img src="img/outbound2.webp" alt="Outbound Fun Game" loading="lazy">
+                            <div class="card-badge">POPULAR</div>
                         </div>
-                        <div class="mission-card">
-                            <span class="mission-code">OP-OUT-02</span>
-                            <h3 class="mission-title">2D1N Bootcamp</h3>
-                            <div class="mission-meta">
-                                <span>Durasi: 24 Jam</span>
-                                <span class="difficulty medium">Sedang</span>
-                            </div>
-                            <span class="objective">Tujuan Psikologis:</span>
-                            <ul class="objective-list">
-                                <li>Menguji ketahanan di bawah tekanan</li>
-                                <li>Mengembangkan strategi kelompok</li>
+                        <div class="card-body">
+                            <h3 class="card-title">Fun Games (1 Day)</h3>
+                            <div class="card-price">Rp 150.000 <span>/pax</span></div>
+                            <ul class="card-features">
+                                <li><i class="ph ph-check-circle"></i> Ice Breaking & Fun Games</li>
+                                <li><i class="ph ph-check-circle"></i> Makan Siang Prasmanan</li>
+                                <li><i class="ph ph-check-circle"></i> Sound System & Area</li>
+                                <li><i class="ph ph-check-circle"></i> Dokumentasi Foto</li>
                             </ul>
-                            <div class="timeline">
-                                <strong>Timeline:</strong> Day Game → Night Challenge → Api Unggun →
-                                Evaluasi Tim
-                            </div>
-                            <a href="https://wa.me/628123456789" class="btn btn-primary">Jalankan
-                                Misi</a>
+                            <a href="https://wa.me/628123456789?text=Info%20Paket%20Fun%20Games" class="btn btn-secondary">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="card-trip">
+                        <div class="card-img-wrap">
+                            <img src="img/outbound5.webp" alt="Outbound Team Building" loading="lazy">
+                            <div class="card-badge best">BEST SELLER</div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Team Building</h3>
+                            <div class="card-price">Rp 250.000 <span>/pax</span></div>
+                            <ul class="card-features">
+                                <li><i class="ph ph-check-circle"></i> All Fun Games Facility</li>
+                                <li><i class="ph ph-check-circle"></i> Problem Solving Games</li>
+                                <li><i class="ph ph-check-circle"></i> Leadership Simulation</li>
+                                <li><i class="ph ph-check-circle"></i> Psikolog Report (Optional)</li>
+                            </ul>
+                            <a href="https://wa.me/628123456789?text=Info%20Paket%20Team%20Building" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="card-trip">
+                        <div class="card-img-wrap">
+                            <img src="img/outbound7.webp" alt="Training Camp" loading="lazy">
+                            <div class="card-badge">CORPORATE</div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Training Camp (2D1N)</h3>
+                            <div class="card-price">Rp 750.000 <span>/pax</span></div>
+                            <ul class="card-features">
+                                <li><i class="ph ph-check-circle"></i> Penginapan (Villa/Hotel)</li>
+                                <li><i class="ph ph-check-circle"></i> 3x Makan + 2x Coffee Break</li>
+                                <li><i class="ph ph-check-circle"></i> Night Motivation Session</li>
+                                <li><i class="ph ph-check-circle"></i> Api Unggun & BBQ</li>
+                            </ul>
+                            <a href="https://wa.me/628123456789?text=Info%20Paket%20Training%20Camp" class="btn btn-secondary">Book Now</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- PAINTBALL -->
-                <div class="mission-category">
-                    <div class="category-header">
-                        <div class="category-icon"><i class="ph ph-crosshair"></i></div>
-                        <h2 class="category-title">OPERASI WARZONE (OP-PB)</h2>
-                    </div>
-                    <div class="mission-grid">
-                        <div class="mission-card">
-                            <span class="mission-code">OP-PB-01</span>
-                            <h3 class="mission-title">Skirmish Line</h3>
-                            <div class="mission-meta">
-                                <span>Durasi: 90 Menit</span>
-                                <span class="difficulty low">Mudah</span>
-                            </div>
-                            <span class="objective">Tujuan Psikologis:</span>
-                            <ul class="objective-list">
-                                <li>Melatih pengambilan keputusan cepat</li>
-                                <li>Koordinasi dalam tim kecil</li>
-                            </ul>
-                            <div class="timeline">
-                                <strong>Timeline:</strong> Briefing → 3 Skenario → Debriefing
-                            </div>
-                            <a href="https://wa.me/628123456789" class="btn btn-outline">Jalankan
-                                Misi</a>
+                <div id="paintball" class="package-grid">
+                    <div class="card-trip">
+                        <div class="card-img-wrap">
+                            <img src="img/paintball.webp" alt="Paintball War" loading="lazy">
+                            <div class="card-badge">WAR</div>
                         </div>
-                        <div class="mission-card">
-                            <span class="mission-code">OP-PB-02</span>
-                            <h3 class="mission-title">Full Assault</h3>
-                            <div class="mission-meta">
-                                <span>Durasi: 2 Jam</span>
-                                <span class="difficulty high">Sulit</span>
-                            </div>
-                            <span class="objective">Tujuan Psikologis:</span>
-                            <ul class="objective-list">
-                                <li>Simulasi manajemen krisis</li>
-                                <li>Kepemimpinan di medan dinamis</li>
+                        <div class="card-body">
+                            <h3 class="card-title">War Game A</h3>
+                            <div class="card-price">Rp 150.000 <span>/pax</span></div>
+                            <ul class="card-features">
+                                <li><i class="ph ph-check-circle"></i> Senjata Semi Otomatis</li>
+                                <li><i class="ph ph-check-circle"></i> 50 Butir Peluru</li>
+                                <li><i class="ph ph-check-circle"></i> Seragam, Google Mask</li>
+                                <li><i class="ph ph-check-circle"></i> Air Mineral</li>
                             </ul>
-                            <div class="timeline">
-                                <strong>Timeline:</strong> Intel Gathering → Infiltration → Hostage
-                                Rescue → Exfil
-                            </div>
-                            <a href="https://wa.me/628123456789" class="btn btn-primary">Jalankan
-                                Misi</a>
+                            <a href="https://wa.me/628123456789?text=Info%20Paket%20Paintball%20A" class="btn btn-secondary">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="card-trip">
+                        <div class="card-img-wrap">
+                            <img src="img/paintball3.webp" alt="Paintball Elite" loading="lazy">
+                            <div class="card-badge best">FULL BATTLE</div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Elite Squad</h3>
+                            <div class="card-price">Rp 225.000 <span>/pax</span></div>
+                            <ul class="card-features">
+                                <li><i class="ph ph-check-circle"></i> 100 Butir Peluru</li>
+                                <li><i class="ph ph-check-circle"></i> Rompi Body Protector</li>
+                                <li><i class="ph ph-check-circle"></i> Dokumentasi Video</li>
+                                <li><i class="ph ph-check-circle"></i> Skenario Perebutan Benteng</li>
+                            </ul>
+                            <a href="https://wa.me/628123456789?text=Info%20Paket%20Paintball%20Elite" class="btn btn-primary">Book Now</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- RAFTING -->
-                <div class="mission-category">
-                    <div class="category-header">
-                        <div class="category-icon"><i class="ph ph-waves"></i></div>
-                        <h2 class="category-title">OPERASI SUNGAI (OP-RF)</h2>
-                    </div>
-                    <div class="mission-grid">
-                        <div class="mission-card">
-                            <span class="mission-code">OP-RF-01</span>
-                            <h3 class="mission-title">River Recon</h3>
-                            <div class="mission-meta">
-                                <span>Jarak: 7 KM</span>
-                                <span class="difficulty low">Mudah</span>
-                            </div>
-                            <span class="objective">Tujuan Psikologis:</span>
-                            <ul class="objective-list">
-                                <li>Sinkronisasi gerakan tim</li>
-                                <li>Kepercayaan pada instruksi pemimpin</li>
-                            </ul>
-                            <div class="timeline">
-                                <strong>Timeline:</strong> Safety Brief → Paddling Drill → River Run →
-                                Riverside Lunch
-                            </div>
-                            <a href="https://wa.me/628123456789" class="btn btn-outline">Jalankan
-                                Misi</a>
+                <div id="rafting" class="package-grid">
+                    <div class="card-trip">
+                        <div class="card-img-wrap">
+                            <img src="img/rafting.webp" alt="Rafting Kasembon" loading="lazy">
+                            <div class="card-badge">FAMILY</div>
                         </div>
-                        <div class="mission-card">
-                            <span class="mission-code">OP-RF-02</span>
-                            <h3 class="mission-title">White Water Assault</h3>
-                            <div class="mission-meta">
-                                <span>Jarak: 12 KM</span>
-                                <span class="difficulty high">Sulit</span>
-                            </div>
-                            <span class="objective">Tujuan Psikologis:</span>
-                            <ul class="objective-list">
-                                <li>Mengelola stres di situasi ekstrem</li>
-                                <li>Adaptasi terhadap perubahan lingkungan</li>
+                        <div class="card-body">
+                            <h3 class="card-title">Kasembon Rafting</h3>
+                            <div class="card-price">Rp 175.000 <span>/pax</span></div>
+                            <ul class="card-features">
+                                <li><i class="ph ph-check-circle"></i> Trip 7.5 KM (Grade 2-3)</li>
+                                <li><i class="ph ph-check-circle"></i> Guide & Rescue</li>
+                                <li><i class="ph ph-check-circle"></i> Makan Siang & Snack</li>
+                                <li><i class="ph ph-check-circle"></i> Shuttle Transport</li>
                             </ul>
-                            <div class="timeline">
-                                <strong>Timeline:</strong> Advanced Brief → Rapid Navigation → Emergency
-                                Drill → Victory Celebration
-                            </div>
-                            <a href="https://wa.me/628123456789" class="btn btn-primary">Jalankan
-                                Misi</a>
+                            <a href="https://wa.me/628123456789?text=Info%20Paket%20Rafting" class="btn btn-secondary">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="card-trip">
+                        <div class="card-img-wrap">
+                            <img src="img/rafting2.webp" alt="Rafting Batu" loading="lazy">
+                            <div class="card-badge best">EXTREME</div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Kaliwatu Rafting</h3>
+                            <div class="card-price">Rp 215.000 <span>/pax</span></div>
+                            <ul class="card-features">
+                                <li><i class="ph ph-check-circle"></i> Trip 10 KM (Grade 3+)</li>
+                                <li><i class="ph ph-check-circle"></i> Welcome Drink</li>
+                                <li><i class="ph ph-check-circle"></i> Makan Siang Prasmanan</li>
+                                <li><i class="ph ph-check-circle"></i> Asuransi</li>
+                            </ul>
+                            <a href="https://wa.me/628123456789?text=Info%20Paket%20Kaliwatu" class="btn btn-primary">Book Now</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- OFFROAD -->
-                <div class="mission-category">
-                    <div class="category-header">
-                        <div class="category-icon"><i class="ph ph-jeep"></i></div>
-                        <h2 class="category-title">OPERASI MEDAN EKSTREM (OP-OF)</h2>
-                    </div>
-                    <div class="mission-grid">
-                        <div class="mission-card">
-                            <span class="mission-code">OP-OF-01</span>
-                            <h3 class="mission-title">Jungle Trail</h3>
-                            <div class="mission-meta">
-                                <span>Durasi: 4 Jam</span>
-                                <span class="difficulty medium">Sedang</span>
-                            </div>
-                            <span class="objective">Tujuan Psikologis:</span>
-                            <ul class="objective-list">
-                                <li>Menghadapi ketidakpastian</li>
-                                <li>Kolaborasi antara navigator & driver</li>
-                            </ul>
-                            <div class="timeline">
-                                <strong>Timeline:</strong> Vehicle Check → Jungle Route → Mud Challenge
-                                → Camp Setup
-                            </div>
-                            <a href="https://wa.me/628123456789" class="btn btn-outline">Jalankan
-                                Misi</a>
+                <div id="offroad" class="package-grid">
+                    <div class="card-trip">
+                        <div class="card-img-wrap">
+                            <img src="img/offroad1.webp" alt="Offroad Batu" loading="lazy">
+                            <div class="card-badge">JEEP 4x4</div>
                         </div>
-                        <div class="mission-card">
-                            <span class="mission-code">OP-OF-02</span>
-                            <h3 class="mission-title">Bromo Sunrise Recon</h3>
-                            <div class="mission-meta">
-                                <span>Durasi: 8 Jam</span>
-                                <span class="difficulty high">Sulit</span>
-                            </div>
-                            <span class="objective">Tujuan Psikologis:</span>
-                            <ul class="objective-list">
-                                <li>Ketahanan fisik & mental dini hari</li>
-                                <li>Penghargaan terhadap pencapaian tim</li>
+                        <div class="card-body">
+                            <h3 class="card-title">Fun Offroad Batu</h3>
+                            <div class="card-price">Rp 1.600.000 <span>/jeep</span></div>
+                            <ul class="card-features">
+                                <li><i class="ph ph-check-circle"></i> Kapasitas 3 Orang</li>
+                                <li><i class="ph ph-check-circle"></i> Rute Hutan Pinus & Lumpur</li>
+                                <li><i class="ph ph-check-circle"></i> Durasi 3-4 Jam</li>
+                                <li><i class="ph ph-check-circle"></i> Driver Profesional</li>
                             </ul>
-                            <div class="timeline">
-                                <strong>Timeline:</strong> Midnight Pickup → Ascent → Sunrise
-                                Observation → Volcano Descent
-                            </div>
-                            <a href="https://wa.me/628123456789" class="btn btn-primary">Jalankan
-                                Misi</a>
+                            <a href="https://wa.me/628123456789?text=Info%20Paket%20Offroad%20Batu" class="btn btn-secondary">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="card-trip">
+                        <div class="card-img-wrap">
+                            <img src="img/offroad2.webp" alt="Bromo Jeep" loading="lazy">
+                            <div class="card-badge best">ICONIC</div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Bromo Sunrise</h3>
+                            <div class="card-price">Rp 2.100.000 <span>/jeep</span></div>
+                            <ul class="card-features">
+                                <li><i class="ph ph-check-circle"></i> Start Midnight Malang</li>
+                                <li><i class="ph ph-check-circle"></i> 4 Spot (Penanjakan, Pasir, Kawah)</li>
+                                <li><i class="ph ph-check-circle"></i> Tiket Masuk TNBTS</li>
+                                <li><i class="ph ph-check-circle"></i> BBM & Driver</li>
+                            </ul>
+                            <a href="https://wa.me/628123456789?text=Info%20Paket%20Bromo" class="btn btn-primary">Book Now</a>
                         </div>
                     </div>
                 </div>
 
-            </div>
-        </section>
-
-        <!-- CTA -->
-        <section class="cta-section">
-            <div class="cta-box">
-                <h2 class="cta-title">BELUM MENEMUKAN MISI YANG SESUAI?</h2>
-                <p class="cta-desc">Tim HQ siap merancang operasi khusus berdasarkan tujuan organisasi
-                    Anda — gratis konsultasi.</p>
-                <a href="https://wa.me/628123456789" class="btn btn-primary">HUBUNGI VIA WHATSAPP</a>
             </div>
         </section>
 
@@ -744,15 +764,40 @@
     <footer>
         <div class="container">
             <div class="footer-grid">
-                <div>
+                <div class="footer-col">
                     <h2>TACTICAL.ID</h2>
-                    <p>JL. Merdeka No. 45, Malang, Jawa Timur.<br>HQ Code: #MLG-001</p>
+                    <p>Pusat aktivitas outbound, paintball, rafting, dan offroad terbaik di Malang dengan pendekatan
+                        psikologi industri.</p>
+                    <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.6;">
+                        JL. Merdeka No. 45, Malang, Jawa Timur.<br>HQ Code: #MLG-001
+                    </p>
                 </div>
-                <div class="footer-right">
-                    <a href="kontak.html" class="btn btn-primary" style="padding:8px 16px;">CONTACT
-                        HQ</a>
-                    <p class="mono-label footer-copyright">© 2024 TACTICAL SYSTEMS.</p>
+
+                <div class="footer-col">
+                    <h3>NAVIGASI</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="tentang.html">Tentang</a></li>
+                        <li><a href="outbound.html">Paket</a></li>
+                        <li><a href="galeri.html">Galeri</a></li>
+                        <li><a href="kontak.html">Kontak</a></li>
+                    </ul>
                 </div>
+
+                <div class="footer-col">
+                    <h3>NETWORK</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">BatuRafting</a></li>
+                        <li><a href="#">Souvenir Kantor</a></li>
+                        <li><a href="#">Artikdia</a></li>
+                        <li><a href="#">Otomagz</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 40px; padding-top: 20px; text-align: center;">
+                <p class="mono-label footer-copyright">© 2024 TACTICAL SYSTEMS.</p>
             </div>
         </div>
     </footer>
@@ -761,29 +806,48 @@
         <i class="ph ph-whatsapp-logo"></i> WhatsApp
     </a>
     <a href="#" class="scroll-top" id="scrollTopBtn">
-    <i class="ph ph-arrow-up" style="font-size: 1.2rem;"></i>
-</a>
+        <i class="ph ph-arrow-up"></i>
+    </a>
 
     <script>
+        // Navbar Toggle
         document.getElementById('hamburger').addEventListener('click', () => {
             document.getElementById('navLinks').classList.toggle('active');
         });
-        // Scroll to Top
-const scrollTopBtn = document.getElementById('scrollTopBtn');
-if (scrollTopBtn) {
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-            scrollTopBtn.classList.add('show');
-        } else {
-            scrollTopBtn.classList.remove('show');
-        }
-    });
 
-    scrollTopBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-}
+        // Tab Logic
+        function openTab(evt, tabName) {
+            var i, x, tablinks;
+            x = document.getElementsByClassName("package-grid");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+                x[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-item");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabName).style.display = "grid";
+            // Timeout to allow display block to apply before adding class for animation
+            setTimeout(() => {
+                document.getElementById(tabName).classList.add("active");
+            }, 10);
+            evt.currentTarget.classList.add("active");
+        }
+
+        // Scroll to Top
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+        });
+        scrollTopBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
     </script>
 
 </body>
